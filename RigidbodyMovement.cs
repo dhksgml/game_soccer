@@ -25,6 +25,8 @@ public class RigidbodyMovement : MonoBehaviour
     public LayerMask groundMask;
     bool isGrounded;
 
+    private GameObject obj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,5 +62,16 @@ public class RigidbodyMovement : MonoBehaviour
 
         transform.Rotate(0f, PlayerMouseInput.x * Sensitivity, 0f);
         PlayerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(xRot,0,45), 0f, 0f);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Ball")
+        {
+            Rigidbody rigid = other.gameObject.GetComponent<Rigidbody>();
+            Vector3 shootVector = transform.TransformDirection(new Vector3(PlayerMovementInput.x, 1, PlayerMovementInput.z)*Speed*Time.deltaTime);
+            rigid.AddForce(shootVector, ForceMode.Impulse);
+
+        }
     }
 }
