@@ -1,11 +1,11 @@
 # GAMENAME: I LOVE SOCCER
-- used Engine : Unity
+- ### used Engine : Unity
 
-- game mode
+- ### game mode
   - story mode
   - multiplay mode
 
-- to implement
+- ### to implement
   - start scene
     - select game mode
     - skip to the next scene
