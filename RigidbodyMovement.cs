@@ -61,7 +61,7 @@ public class RigidbodyMovement : MonoBehaviour
         xRot -= PlayerMouseInput.y * Sensitivity;
 
         transform.Rotate(0f, PlayerMouseInput.x * Sensitivity, 0f);
-        PlayerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(xRot,0,45), 0f, 0f);
+        PlayerCamera.transform.localRotation = Quaternion.Euler(Mathf.Clamp(xRot,10,45), 0f, 0f);
     }
 
     private void OnCollisionEnter(Collision other)
