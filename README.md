@@ -6,10 +6,10 @@
   - multiplay mode
 
 - to implement
-- start scene
-  - select game mode
-  - skip to the next scene
+  - start scene
+    - select game mode
+    - skip to the next scene
 
-- game scene(story mode)
-  - kick the ball to the destination
+  - game scene(story mode)
+    - kick the ball to the destination
   
